@@ -9,7 +9,7 @@
 2) Run Ganache and choose quickstart option.
 3) Connect to your metamask:
 * Add testnet network to metamask.
-[add testnet to metamask](images/add_testnet_to_metamask.png)
+![add testnet to metamask](images/add_testnet_to_metamask.png)
 * Import the account into metamask by copying the private key from Ganache accounts.
 
 
