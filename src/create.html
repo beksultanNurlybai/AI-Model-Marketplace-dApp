@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Create Model</h2>
+        <form id="create-model-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter model name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price (in Ether)</label>
+                <input type="text" class="form-control" id="price" placeholder="Enter price" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Enter model description" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+        <a href="index.html" class="btn btn-secondary mt-3">Back to Marketplace</a>
+    </div>
+    <script src="js/contract.js"></script>
+    <script src="js/create.js"></script>
+</body>
+</html>
