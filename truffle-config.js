@@ -1,6 +1,3 @@
-const HDWalletProvider = require('@truffle/hdwallet-provider');
-const Web3 = require('web3');
-
 module.exports = {
     networks: {
         development: {
