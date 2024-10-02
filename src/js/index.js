@@ -1,3 +1,19 @@
+document.getElementById('withdrawButton').addEventListener('click', async () => {
+    try {
+        const contract = await getContract();
+        const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+        const account = accounts[0];
+        
+        await contract.methods.withdrawFunds().send({ from: account });
+
+        alert('Funds withdrawn successfully!');
+
+    } catch (error) {
+        console.error('Error withdrawing funds:', error);
+        alert('Failed to withdraw funds. Please try again.');
+    }
+});
+
 async function loadAvailableModels() {
     const contract = await getContract();
     const totalModels = await contract.methods.totalModels().call();
