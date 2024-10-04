@@ -9,21 +9,41 @@
 2) Run Ganache and choose quickstart option.
 3) Connect to your metamask:
 * Add testnet network to metamask.
-![add testnet to metamask](images/add_testnet_to_metamask.png)
+![add testnet to metamask](images/metamask_connection.png)
 * Import the account into metamask by copying the private key from Ganache accounts.
+![add accounts to metamask](images/metamask_connection2.png)
 
-
-### 1) Install dependencies
+### Smart Contract Deployment
+1) Go to project directory (AI-Model-Marketplace-dApp), and install all dependencies:
 ```
 $ npm install
 ```
-
-### 2) Install truffle
-```
-$ npm i truffle
-```
-
-### 3) Compile the smart contract
+2) Compile the smart contract:
 ```
 $ truffle compile
 ```
+3) Migrate the smart contract:
+> [!NOTE]
+> Ganache must be launched
+```
+$ truffle migrate
+```
+4) Copy the contract address from an output of previous "truffle migrate" command, and put the address of contract to variable called "contractAddress" in file src/js/contract.js:
+```js
+const contractAddress = 'put contract address here';
+let web3;
+let contract;
+
+async function connectWeb3() {
+    /* code */
+}
+```
+
+### Run Website
+1) run local server and open it in browser:
+```
+$ http-server
+```
+2) navigate to src.
+![website](images/website.png)
+![website](images/website2.png)
