@@ -47,3 +47,4 @@ $ http-server
 2) navigate to src.
 ![website](images/website.png)
 ![website](images/website2.png)
+3) You are on the site. Now you can try to create, buy and evaluate models, as well as withdraw accumulated ether.
